@@ -1,14 +1,12 @@
-import org.junit.Assert;
 import org.junit.Test;
-
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class DealerTest {
-    Dealer dealer = new Dealer();
+    private Dealer dealer = new Dealer();
 
     @Test
-    public void loadDataTest() throws FileNotFoundException {
-        dealer.loadData("SeptemberInventory.txt");
+    public void loadDataTest() throws IOException {
+        dealer.loadData("https://raw.githubusercontent.com/kyungsooim/TestData/master/data/SeptemberInventory.txt");
     }
 
     @Test
